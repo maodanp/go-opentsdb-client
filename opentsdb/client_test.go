@@ -22,6 +22,7 @@ func TestPut(t *testing.T) {
 	} else {
 		log.Logger.Debug("put.resp.info", rr.RespInfo)
 	}
+	c.Close()
 }
 
 func TestQueryGet(t *testing.T) {
@@ -39,6 +40,7 @@ func TestQueryGet(t *testing.T) {
 	} else {
 		log.Logger.Debugf("query.get.info: %+v", *queryRsp)
 	}
+	c.Close()
 }
 
 func TestQueryPost(t *testing.T) {
@@ -60,4 +62,5 @@ func TestQueryPost(t *testing.T) {
 	} else {
 		log.Logger.Debugf("query.post.info: %+v", *queryRsp)
 	}
+	c.Close()
 }

@@ -107,7 +107,8 @@ func (c *Client) PutFromReader(reader io.Reader) (putResp *PutResponse, err erro
 
 //Close close the client
 func (c *Client) Close() {
-
+	c.transport.DisableKeepAlives = true
+	c.transport.CloseIdleConnections()
 }
 
 // QueryByGet query with GET method
