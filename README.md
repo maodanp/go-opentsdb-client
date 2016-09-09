@@ -53,6 +53,6 @@ func (c *Client) QueryByPost(query *QueryRequestPost) (queryResp *QueryResponse,
 
 ## Development Plan
 * Add connection pool
-* Add batch write to opentsdb
+* Add RESTful API
 * Add connTimeOut and rwTimeOut
 * Read metrics by different way (file, io etc.)
